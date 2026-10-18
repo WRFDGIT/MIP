@@ -1,1 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Site — Welcome</title>
+  <style>
+    :root{--accent:#0b76ef;--bg:#fff;--muted:#666;--card:#f8f9fb}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;color:#111;background:var(--bg);line-height:1.5}
+    header{background:linear-gradient(90deg,#065fd4 0%,#0b76ef 100%);color:#fff;padding:18px 20px}
+    .wrap{max-width:980px;margin:0 auto;padding:24px}
+    nav{display:flex;justify-content:space-between;align-items:center}
+    nav a{color:rgba(255,255,255,.95);text-decoration:none;font-weight:600}
+    .hero{padding:48px 20px;text-align:left;background:linear-gradient(180deg,rgba(11,118,239,0.06),transparent)}
+    .hero h1{margin:0 0 8px;font-size:2rem}
+    .lead{color:var(--muted);margin:0 0 16px}
+    .buttons{margin-top:18px}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;margin-right:8px}
+    main{padding:28px 20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{background:var(--card);padding:18px;border-radius:12px}
+    footer{padding:18px 20px;border-top:1px solid #eee;color:var(--muted);font-size:14px;text-align:center}
+    .social a{color:var(--accent);text-decoration:none;margin-right:10px}
+    @media (max-width:520px){ .hero h1{font-size:1.5rem} nav{flex-direction:column;align-items:flex-start} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div><a href="/">YourSite</a></div>
+        <div style="font-size:14px;color:rgba(255,255,255,.9)">Simple page • Built with ChatGPT</div>
+      </nav>
+    </div>
+  </header>
 
+  <section class="hero">
+    <div class="wrap">
+      <h1>Welcome — Your new website</h1>
+      <p class="lead">This is a simple, responsive starter page you can edit. Replace text and links to make it yours.</p>
+      <div class="buttons">
+        <a class="btn" href="#about">About</a>
+        <a class="btn" href="#contact" style="background:#06b781">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="wrap">
+      <section id="about" class="card" style="margin-bottom:16px">
+        <h2 style="margin-top:0">About</h2>
+        <p style="color:var(--muted)">Write a short paragraph about what you do, who you are, or what this site is for. Example: “I create simple websites and small web apps — this is my demo page.”</p>
+      </section>
+
+      <section id="projects" style="margin-bottom:16px">
+        <h2>Examples / Projects</h2>
+        <div class="grid">
+          <div class="card">
+            <h3 style="margin-top:0">Project A</h3>
+            <p style="color:var(--muted)">Short description — a link, screenshot, or notes.</p>
+            <p><a href="#" style="color:var(--accent)">Learn more →</a></p>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0">Project B</h3>
+            <p style="color:var(--muted)">Short description — demo or repository link.</p>
+            <p><a href="#" style="color:var(--accent)">View repo →</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h2 style="margin-top:0">Contact</h2>
+        <p style="color:var(--muted)">Email: <a href="mailto:you@example.com" style="color:var(--accent)">you@example.com</a></p>
+        <p style="color:var(--muted)">Tip: To collect messages on the web, you can use form services like Formspree or Netlify Forms — tell me if you want a contact form that works without a server.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div style="margin-bottom:8px">© <span id="year"></span> Your Name</div>
+      <div class="social">
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // small nicety: set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
